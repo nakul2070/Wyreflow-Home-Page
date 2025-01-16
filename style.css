@@ -1,0 +1,159 @@
+
+body {
+  margin: 0;
+  font-family: 'Inter', sans-serif;
+  color: white;
+  background-color: black;
+}
+
+
+.navbar {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 15px 40px;
+  background-color: black;
+  z-index: 1000;
+}
+
+.logo-image {
+  height: 40px;
+}
+
+.menu {
+  display: flex;
+  gap: 17px;
+  align-items: center;
+}
+
+.menu-link {
+  color: white;
+  text-decoration: none;
+  font-size: 16px;
+  transition: color 0.3s;
+}
+
+.menu-link:hover {
+  color: gray;
+}
+
+.menu-toggle {
+  display: none;
+  background: none;
+  border: none;
+  color: white;
+  font-size: 24px;
+  cursor: pointer;
+}
+
+.hero {
+  position: relative;
+  height: 100vh;
+  background-image: url('./image.jpg');
+  background-size: cover;
+  background-position: center;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+}
+
+.hero-overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.6);
+}
+
+.hero-container {
+  position: relative;
+  z-index: 1;
+  max-width: 600px;
+  padding: 0 20px;
+}
+
+.hero-title h1 {
+  font-size: 50px;
+  letter-spacing: 3px;
+  line-height: 1.3em;
+}
+
+.hero-text {
+  margin-top: 20px;
+}
+
+.hero-text h3 {
+  font-size: 1.3rem;
+  line-height: 1.6em;
+  font-weight: bold;
+}
+
+.hero-button {
+  background-color: transparent;
+  color: #fff;
+  font-size: 16px;
+  font-weight: bold;
+  padding: 10px 20px;
+  border-radius: 5px;
+  text-decoration: none;
+  transition: background-color 0.3s;
+}
+
+.hero-button:hover {
+  background-color: gray;
+}
+
+
+@media (max-width: 768px) {
+  .menu {
+    display: none;
+    flex-direction: column;
+    background-color: black;
+    position: absolute;
+    top: 60px;
+    right: 40px;
+    border: 1px solid white;
+    padding: 10px;
+  }
+
+  .menu.show {
+    display: flex;
+  }
+
+  .menu-toggle {
+    display: block;
+  }
+
+  .hero-title h1 {
+    font-size: 32px;
+  }
+
+  .hero-text h3 {
+    font-size: 16px;
+  }
+}
+
+@media (max-width: 480px) {
+  .navbar {
+    padding: 10px 20px;
+  }
+
+  .hero-title h1 {
+    font-size: 28px;
+  }
+
+  .hero-text h3 {
+    font-size: 14px;
+  }
+
+  .hero-button {
+    font-size: 12px;
+    padding: 6px 12px;
+  }
+}
